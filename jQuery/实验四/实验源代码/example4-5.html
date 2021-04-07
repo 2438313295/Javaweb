@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+       #dd{
+       	width:200px;
+       	height:200px;
+       	background-color: pink;
+       	position: fixed;
+       }
+	</style>
+	<script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	   $(function(){
+          $("#dd").css({
+          	left:($(window).width()-$("#dd").width())/2,
+          	top:($(window).height()-$("#dd").height())/2
+          });
+	   })
+	</script>
+</head>
+<body>
+	<div id="dd"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>增减购物车商品信息</title>
+<style type="text/css" >
+*{
+ font-size:14px;
+}
+div.shop{ width:600px; text-align:center;}
+caption{ font-size:20px; font-weight:bold;}
+</style>
+<script type="text/javascript" src="jquery-1.12.4.js" ></script>
+<script type="text/javascript">
+$(function(){
+
+})
+</script>
+</head>
+<body>
+<div class="shop">
+<table border="1" cellpadding="0" cellspacing="0">
+  <caption>购物车商品信息</caption> 
+	<tr>
+    	<th><input type='checkbox' id="selectAll">全选/全不选</th>
+        <th>商品信息</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>操作</th>       
+    </tr>
+   	<tr>
+       	<td><input name="cc" type="checkbox" class="ii1"></td>
+        <td><img src="images/sang.gif" class="products"/><a href="#">天堂雨伞</a></td>
+        <td>￥32.9元</td>
+        <td><input type="text" class="quantity" value="1"></td>
+        <td><a href="#" class="del">删除</a></td>
+    </tr>
+    <tr>
+       	<td><input name="cc" type="checkbox" class="ii2"></td>
+        <td><img src="images/iphone.gif" class="products"/><a href="#">苹果手机iphone5</a></td>
+        <td>￥3339元</td>
+        <td><input type="text" class="quantity" value="1"> </td>
+        <td><a href="#" class="del">删除</a></td>
+    </tr>
+    <tr>
+       	<td><input name="cc" type="checkbox"></td>
+        <td><img src='images/computer.jpg'  class='products' /><a href='#'>联想笔记本电脑</a></td>
+        <td>￥3200元</td>
+        <td><input type="text" class="quantity" value="1"> </td>
+        <td><a href="#" class="del">删除</a></td>
+    </tr>
+ </table>
+ <br/>
+<input type="button" id="addSelect" value="添加">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="delSelect" value="删除">
+</div>
+</body>
+</html>
+

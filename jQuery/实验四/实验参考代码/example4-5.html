@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+       #dd{
+       	width:200px;
+       	height:200px;
+       	background-color: pink;
+       	padding: 40px;
+       	border:50px solid blue;
+       	margin:60px;
+       	position: fixed;
+       }
+	</style>
+	<script src="jquery-1.12.4.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	   $(function(){
+	   	  //页面结构加载后div元素在页面中居中
+          $("#dd").css({
+	          /*left:($(window).width()-$("#dd").width())/2,
+	          	top:($(window).height()-$("#dd").height())/2*/
+	         /* left:($(window).width()-$("#dd").innerWidth())/2,
+	          top:($(window).height()-$("#dd").innerHeight())/2*/
+	          /*left:($(window).width()-$("#dd").outerWidth())/2,
+	          top:($(window).height()-$("#dd").outerHeight())/2*/
+	          left:($(window).width()-$("#dd").outerWidth(true))/2,
+	          top:($(window).height()-$("#dd").outerHeight(true))/2
+          });
+          //窗口缩放时div元素仍保持居中
+          $(window).resize(function(){
+          	$("#dd").css({
+	          /*left:($(window).width()-$("#dd").width())/2,
+	          	top:($(window).height()-$("#dd").height())/2*/
+	         /* left:($(window).width()-$("#dd").innerWidth())/2,
+	          top:($(window).height()-$("#dd").innerHeight())/2*/
+	          /*left:($(window).width()-$("#dd").outerWidth())/2,
+	          top:($(window).height()-$("#dd").outerHeight())/2*/
+	          left:($(window).width()-$("#dd").outerWidth(true))/2,
+	          top:($(window).height()-$("#dd").outerHeight(true))/2
+          });
+          });
+	   })
+	</script>
+</head>
+<body>
+	<div id="dd"></div>
+</body>
+</html>
